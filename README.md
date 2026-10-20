@@ -1,6 +1,6 @@
 # rolecall
 
-Ashita v4 addon for FFXI party management. Replaces `autojoin` and `autoinv`.
+An FFXI group management addon (Ashita v4) designed to assist support players in buffing multiple parties in an alliance. Replaces `autojoin` and `autoinv`.
 
 ## How it works
 
