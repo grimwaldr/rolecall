@@ -52,7 +52,3 @@ Settings are per character in `config/addons/rolecall/`.
 ## Install
 
 Copy the `rolecall` folder to `Ashita/addons/` and run `/addon load rolecall`. Unload `autojoin` and `autoinv` first.
-
-## Credits
-
-By Grimwald & Goose. Based on the autojoin and autoinv addons. Licensed under GPLv3, see [LICENSE](LICENSE).
