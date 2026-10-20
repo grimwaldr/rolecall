@@ -24,17 +24,16 @@ Grimwald: /rc add Goose
 Goose:    /rc add Grimwald
 ```
 
-Grimwald makes an in-game macro for each party leader:
+Grimwald sets up two hotkeys (macros or Ashita binds):
 
 ```
 /pcmd leave
-/wait 1
 /tell Goose inv
 ```
 
-One press: Grimwald leaves his current party, Goose's rolecall sees the tell and invites him, and Grimwald's rolecall accepts. Goose doesn't have to do anything, but he does need to be his party's leader to invite. Make one macro per leader to move around the alliance, including back to your own party.
+Two presses: leave, then tell. Goose's rolecall sees the tell and invites Grimwald, and Grimwald's rolecall accepts. Goose doesn't have to do anything, but he does need to be his party's leader to invite.
 
-If you're not in a party, `/tell Goose inv` on its own is enough. You can bind it to a key in Ashita with `/bind F1 /tell Goose inv`.
+Keep one leave key and add a tell key per party leader to move around the alliance, including back to your own party.
 
 ## Commands
 
