@@ -4,15 +4,14 @@ An FFXI group management addon (Ashita v4) designed to assist support players in
 
 ## How it works
 
-**Invites you receive** (packet 0x0DC). Each invite is checked against your per-player lists, then the default mode:
+One whitelist, both directions:
 
-- `accept`: auto-accepts
-- `decline`: auto-declines
-- `ask`: does nothing, so the normal in-game prompt shows
+- A whitelisted player invites you: auto-accepted.
+- A whitelisted player sends you the trigger in a tell (`inv` by default): auto-invited.
 
-**Auto-invite** (tells, packet 0x017). If a player sends you a tell that exactly matches a trigger phrase (not case sensitive, auto-translate is parsed), rolecall runs `/pcmd add <name>`. Players on `allow` are always invited. Players on `deny` are never invited. Everyone else depends on whether the default is `on` or `off`.
+Anyone not on the whitelist is left alone, so the normal game prompts apply.
 
-A name can only be on one list per side, so adding it to `accept` takes it off `decline`.
+For a BRD/COR moving between alliance parties, the BRD/COR whitelists each party leader and each leader whitelists the BRD/COR.
 
 ## Commands
 
@@ -20,17 +19,11 @@ A name can only be on one list per side, so adding it to `accept` takes it off `
 
 | Command | Does |
 |---|---|
-| `/rc` | Show modes, lists, triggers |
-| `/rc join <accept\|decline\|ask>` | Default for invites you receive |
-| `/rc inv <on\|off>` | Default for auto-invite |
-| `/rc <accept\|decline\|ask> <name>` | Per-player invite rule |
-| `/rc <allow\|deny> <name>` | Per-player auto-invite rule |
-| `/rc remove <name>` | Remove name from all lists |
-| `/rc trigger <add\|del> <phrase>` | Manage trigger phrases |
-| `/rc reload` / `/rc reset` | Reload settings from disk / reset to defaults |
+| `/rc` | Show the whitelist and trigger |
+| `/rc add <name>` | Add a player to the whitelist |
+| `/rc remove <name>` | Remove a player from the whitelist |
+| `/rc trigger <word>` | Set the trigger tell (not case sensitive) |
 | `/rc help` | Command list |
-
-Defaults: join `ask`, inv `off`, triggers `inv`, `please invite me.`, `invite to join party`.
 
 Settings are per character in `config/addons/rolecall/`.
 
@@ -40,4 +33,4 @@ Copy the `rolecall` folder to `Ashita/addons/` and run `/addon load rolecall`. U
 
 ## Credits
 
-Based on autojoin (atom0s & Thorny) and autoinv (goose). GPLv3.
+By Grimwald & Goose. Based on Ashita's autojoin addon. GPLv3.
