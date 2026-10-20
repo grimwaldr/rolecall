@@ -55,4 +55,4 @@ Copy the `rolecall` folder to `Ashita/addons/` and run `/addon load rolecall`. U
 
 ## Credits
 
-By Grimwald & Goose. Based on Ashita's autojoin addon. GPLv3.
+By Grimwald & Goose. Based on the autojoin and autoinv addons. Licensed under GPLv3, see [LICENSE](LICENSE).
